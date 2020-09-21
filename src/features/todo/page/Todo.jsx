@@ -1,15 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import AddTodo from '../template/AddTodo';
+import TodoListMaker from '../template/TodoListMaker';
 
-const Todo = ({ todos }) => {
-  console.log(todos);
-  return <AddTodo />;
+const Todo = () => {
+  return (
+    <div>
+      <AddTodo />
+      <TodoListMaker />
+    </div>
+  );
 };
 
-function select(state) {
-  return {
-    todos: state.todos,
-  };
-}
-export default connect(select)(Todo);
+export default Todo;
